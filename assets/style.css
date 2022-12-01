@@ -1,69 +1,64 @@
 :root {
-
-}
-
-* {
-    background-color: gray;
+  --border: 3px;
+  --color1: #e8c56b;
+  --color2: #a53c00;
+  --from: 30deg;
+  --distance: 46%;
+  --bgcolor: #33353d;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    background-color: orange;
     font-family: Arial, Helvetica, sans-serif;
+    background: var(--bgcolor);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
   }
   
-  h1 {
-    color: white;
-    text-align: center;
-    background-color: orange;
-  }
+h1 {
+  color: white;
+  text-align: center;
+  background-color: var(--bgcolor);
+}
   
-  p {
-    font-family: verdana;
-    font-size: 20px;
-    background-color: orange;
-  }
+p {
+  font-family: verdana;
+  font-size: 20px;
+  background-color: var(--bgcolor);
+}
 
-  .header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: orange;
-    margin: auto;
-  }
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bgcolor);
+  margin: auto;
+}
 
-  .header h1 {
-    font-size: 50px;
-    font-weight: 200%;
-    border: 5px dotted rgb(140, 73, 1);
-    padding: 25px;
-    border-radius: 25px;
-  }
+.header h1 {
+  font-size: 50px;
+  font-weight: 200%;
+  border: 5px dotted rgb(140, 73, 1);
+  padding: 25px;
+  border-radius: 25px;
+}
 
-  .navigation {
-    display: flex;
-    padding: 2%;
-    background-color: orange;
-    color: whitesmoke;
-    justify-content: space-around;
-  }
+.navigation {
+  display: flex;
+  padding: 2%;
+  background-color: var(--bgcolor);
+  color: whitesmoke;
+  justify-content: space-around;
+}
 
-  .navigation a {
-    font-size: 25px;
-    font-weight: 100%;
-    background-color: orange;
-    color: white
-  }
-
-  .bigpicture {
-    height: 500px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("./images/mario.png");
-    background-size: cover;
-    background-position: center;
+.bigpicture {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("./images/banner.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .custom-btn {
@@ -72,17 +67,13 @@ body {
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
+  font-family: sans-serif;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
+   box-shadow:inset 2px 2px 2px 0px rgba(249, 243, 243, 0.5);
 }
 
 .btn {
@@ -99,13 +90,13 @@ body {
   left: 0;
   z-index: -1;
   border-radius: 5px;
-  background-color: #eaf818;
-  background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+  background-color: #f83618;
+  background-image: linear-gradient(315deg, #e19256 10%, #ffe100 90%);
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5);
   transition: all 0.3s ease;
 }
 .btn:hover {
-  color: #000;
+  color: rgb(199, 122, 39);
 }
 .btn:hover:after {
   top: auto;
@@ -114,4 +105,43 @@ body {
 }
 .btn:active {
   top: 2px;
+}
+
+.btn:focus {
+  outline: rgb(231, 213, 19) solid 2px;
+}
+
+.container {
+  position: relative;
+  padding: 30px;
+}
+.container::after {
+  content: '';
+  border-radius: 999px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: conic-gradient(
+    from var(--from),
+    var(--color1),
+    var(--color2) var(--distance),
+    transparent var(--distance)
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--border)),
+    #fff calc(100% - var(--border) + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--border)),
+    #fff calc(100% - var(--border) + 1px)
+  );
+}
+img {
+  border-radius: 999px;
+  display: block;
 }
