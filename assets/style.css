@@ -111,6 +111,13 @@ p {
   outline: rgb(231, 213, 19) solid 2px;
 }
 
+article {
+  background: #33353d;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
 .container {
   position: relative;
   padding: 30px;
@@ -144,4 +151,104 @@ p {
 img {
   border-radius: 999px;
   display: block;
+}
+
+#about-me {
+  margin-top: 40px;
+  float: right;
+  width: 75%;
+  padding: 50px;
+  height: 300px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #864a4a;
+  color: #ffffff;
+  border: 20px solid rgb(226, 160, 124);
+  border-radius: 15px;
+  line-height: 30px;
+}
+
+#about-me p {
+  background-color: #864a4a;
+}
+
+#about-me h2 {
+  text-align: right;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+#about-me img {
+  max-height: 300px;
+  float: left;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#portfolio {
+  margin-top: 40px;
+  float: right;
+  width: 75%;
+  padding: 50px;
+  height: 500px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #864a4a;
+  color: #ffffff;
+  border: 20px solid rgb(226, 160, 124);
+  border-radius: 15px;
+  line-height: 30px;
+}
+
+#portfolio p {
+  background-color: #864a4a;
+}
+
+#portfolio h2 {
+  text-align: right;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+#portfolio img {
+  max-height: 300px;
+  float: left;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#contact {
+  margin-top: 40px;
+  float: right;
+  width: 75%;
+  padding: 50px;
+  height: 350px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #864a4a;
+  color: #ffffff;
+  border: 20px solid rgb(226, 160, 124);
+  border-radius: 15px;
+  line-height: 30px;
+}
+
+#contact p {
+  background-color: #864a4a;
+}
+
+#contact h2 {
+  text-align: right;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+
+#contact img {
+  max-height: 300px;
+  float: left;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#contact form {
+    float: right;
 }
