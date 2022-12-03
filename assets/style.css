@@ -15,9 +15,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex: 1;
     place-items: center;
-    height: 100vh;
     margin: 0;
   }
   
@@ -118,7 +116,6 @@ article {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
   margin: 0;
 }
 
@@ -164,7 +161,6 @@ img {
 
 #about-me {
   margin-top: 40px;
-  float: right;
   width: 75%;
   padding: 50px;
   height: 300px;
@@ -198,10 +194,8 @@ img {
 
 #portfolio {
   margin-top: 40px;
-  float: right;
-  width: 75%;
   padding: 50px;
-  height: 500px;
+  width: 75%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #864a4a;
   color: #ffffff;
@@ -358,5 +352,34 @@ input[type=submit]:hover {
   /* Use flex-direction to stack the navbar, sidebar, and body */
   body {
     flex-direction: column;
+    margin: 0%;
+    align-items: center;
+    width: fit-content;
+    }
+
+  #about-me {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: max-content;
+    justify-content: space-between;
+  }
+
+  #portfolio {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: max-content;
+    justify-content: space-between;
+  }
+
+  #contact {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: max-content;
+  }
+
+  #contact form {
+    float: none;
+    margin-top: 25px;
+    margin-left: 50px;
   }
 }
