@@ -13,7 +13,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--bgcolor);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
     place-items: center;
     height: 100vh;
     margin: 0;
@@ -36,7 +38,8 @@ p {
 .header {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: var(--bgcolor);
   margin: auto;
 }
@@ -112,8 +115,9 @@ p {
 article {
   background: #33353d;
   display: flex;
-  flex-direction: column;
-  place-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   height: 100vh;
   margin: 0;
 }
@@ -150,7 +154,10 @@ article {
 }
 img {
   border-radius: 999px;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* About me section */
@@ -344,4 +351,12 @@ input[type=submit]:hover {
 
 .totop:hover {
   background-color: #555;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Use flex-direction to stack the navbar, sidebar, and body */
+  body {
+    flex-direction: column;
+  }
 }
