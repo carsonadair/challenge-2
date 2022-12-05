@@ -23,6 +23,7 @@ h1 {
   color: white;
   text-align: center;
   background-color: var(--bgcolor);
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
   
 p {
@@ -294,7 +295,6 @@ section #contact p {
 
 section form {
   max-width: 400px;
-  float: none;
   margin: auto;
   padding-top: 25px;
 }
