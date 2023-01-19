@@ -217,12 +217,11 @@ img {
 }
 
 .work1 {
-  max-width: auto;
+  max-width: 400px;
   height:300px;
   float: left;
   margin-left: 30px;
   margin-right: 30px;
-  margin-top: -50px;
   border: solid 2px transparent;
   display: flex;
 }
@@ -233,8 +232,8 @@ img {
 }
 
 .work2 {
-  max-height: 220px;
-  max-width: 220px;
+  max-height: 300px;
+  max-width: auto;
   float: left;
   margin-left: 20px;
   margin-right: 20px;
